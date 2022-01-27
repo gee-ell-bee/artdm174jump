@@ -1,4 +1,2 @@
-# test1
+# ARTDM 174 Jump Page
 testing the github pages function
-
-<a href="index.html">Go to files</a>
