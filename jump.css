@@ -23,9 +23,8 @@ body {
 }
 
 a {
-    text-decoration: underline dotted;
-    color: #000000;
-    text-decoration-color: #0000003b;
+    color: rgb(2, 105, 173);
+    text-decoration: none;
 }
 
 main {
@@ -83,6 +82,10 @@ nav a {
     text-decoration-color: #d86b0462;
 }
 
+nav a:hover {
+    opacity: .8;
+}
+
 nav img.image-instagram {
     mix-blend-mode: difference;
     width: 15px;
@@ -132,9 +135,31 @@ section.labs {
     color:rgb(35, 117, 128);
 }
 
+/* #region lab lis */
+
+    section.labs li a[href] {
+        background:rgb(158, 229, 238);
+    }
+
+    section.labs li.r a:hover {
+        background: rgb(158, 229, 238) url(/images/previews/preview-labreview.png) center/cover no-repeat;
+    }
+/* #endregion */
+
 section.projects {
     background-color: lightcyan;
 }
+
+/* #region project lis */
+
+    section.projects li a[href] {
+        background:rgb(209, 238, 164);
+    }
+    section.projects li.one a:hover {
+        background: rgb(209, 238, 164) url(/images/previews/preview-project1.png) bottom/cover no-repeat;
+    }
+
+/* #endregion */
 
 ol {
     display: flex;
@@ -153,7 +178,19 @@ ol li {
     margin: .5rem;
     width: 9rem;
     height: 9rem;
-    padding: .5rem;
+}
+
+ol li a {
+    width: 100%;
+    height: 100%;
+    padding: .125rem;
+}
+
+ol li a .item-title {
+    text-decoration: underline dotted;
+    color: #000000;
+    text-decoration-color: #0000003b;
+    display: block;
 }
 
 footer {
