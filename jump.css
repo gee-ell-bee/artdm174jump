@@ -200,6 +200,29 @@ section.labs {
         animation-fill-mode: forwards;
     }
 
+    section.labs li.three {
+        background-image: url(images/previews/preview-lab3.png);
+    }
+
+    section.labs li.four {
+        background-image: url(images/previews/preview-lab4.png);
+    }
+
+    section.labs li.five {
+        background-image: url(images/previews/preview-lab5.png);
+    }
+
+    section.labs li.six {
+        background-image: url(images/previews/preview-lab6.png);
+    }
+
+    section.labs li.seven {
+        background-image: url(images/previews/preview-lab7.png);
+    }
+
+    section.labs li.eight {
+        background-image: url(images/previews/preview-lab8.png);
+    }
 /* #endregion */
 
 section.projects {
@@ -221,13 +244,21 @@ section.projects {
     }
 
     section.projects li.one {
-        background-image: url(images/previews/preview-lab1.png);
+        background-image: url(images/previews/preview-project1.png);
         background-size: 0%;
     }
 
     section.projects li.one:hover {
         animation: zoomin 1s ease-in-out .5s;
         animation-fill-mode: forwards;
+    }
+
+    section.projects li.two {
+        background-image: url(images/previews/preview-project2.png);
+    }
+
+    section.projects li.three {
+        background-image: url(images/previews/preview-project3.png);
     }
 
 /* #endregion */
