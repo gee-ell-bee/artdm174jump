@@ -1,2 +1,2 @@
 # ARTDM 174 Jump Page
-testing the github pages function
+Where all my projects are stored for the JavaScript class
