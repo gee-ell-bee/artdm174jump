@@ -436,8 +436,8 @@ footer {
                 
                 --droponedelay: 0s;
 
-                --droptwodelay: .5s;
-                --droptwotime: 3.5s;
+                --droptwodelay: 3s;
+                --droptwotime: 1s;
 
                 --dropthreedelay: 1.5s;
                 --dropthreetime: 1.5s;
@@ -450,9 +450,9 @@ footer {
 
             /* positioning */
                 --droponelength: -8rem;
-                --droptwolength: -5rem;
-                --dropthreelength: -2rem;
-                --dropfourlength: 2rem;
+                --droptwolength: -3rem;
+                --dropthreelength: -5rem;
+                --dropfourlength: 4rem;
 
         /* #endregion */
     }
