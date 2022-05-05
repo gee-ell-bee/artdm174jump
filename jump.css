@@ -12,21 +12,37 @@
 }
 
 html {
-    --droponetime: .25s;
-    --droponedelay: .25s;
-    --droponelength: -7rem;
-    --droptwolength: calc(var(--droponelength) - 8rem);
-    --droptwodelay: calc(var(--droponetime) + var(--droponedelay));
-    --droptwotime: calc(var(--droponetime) * 2);
-    --dropthreedelay: calc(var(--droptwodelay) + var(--droptwotime));
-    --dropthreelength: calc(var(--droptwolength) - 10rem);
-    --dropthreetime: calc(var(--droptwotime) * 2);
-    --dropfourdelay: calc(var(--dropthreedelay) + var(--dropthreetime));
-    --dropfourlength: calc(var(--dropthreelength) - 38rem);
-    --dropfourtime: calc(var(--dropthreetime) * 2);
-    --dropfivedelay: calc(var(--dropfourdelay) + var(--dropfourtime));
-    --dropfivelength: calc(var(--dropfourlength) - 40rem);
-    --dropfivetime: calc(var(--dropfourtime) * 2);
+    /* #region variables */
+
+        /* timing */
+
+            --dropbasedelay: .125s;
+            --dropbasetime: .5s;
+            --dropbasemultiplier: 1.5;
+        
+            --droponedelay: 0s;
+           /* droponetime: dropbasetime; */
+
+            --droptwodelay: calc(var(--dropbasetime) + var(--droponedelay) + var(--dropbasedelay));
+            --droptwotime: calc(var(--dropbasetime) * var(--dropbasemultiplier));
+            
+            --dropthreedelay: calc(var(--droptwodelay) + var(--droptwotime) + var(--dropbasedelay));
+            --dropthreetime: calc(var(--droptwotime) * var(--dropbasemultiplier));
+
+            --dropfourdelay: calc(var(--dropthreedelay) + var(--dropthreetime) + var(--dropbasedelay));
+            --dropfourtime: calc(var(--dropthreetime) * var(--dropbasemultiplier));
+
+            --dropfivedelay: calc(var(--dropfourdelay) + var(--dropfourtime) + var(--dropbasedelay));
+            --dropfivetime: calc(var(--dropfourtime) * var(--dropbasemultiplier));
+
+        /* sizing */
+            --droponelength: -7rem;
+            --droptwolength: calc(var(--droponelength) - 8rem);
+            --dropthreelength: calc(var(--droptwolength) - 10rem);
+            --dropfourlength: calc(var(--dropthreelength) - 38rem);
+            --dropfivelength: calc(var(--dropfourlength) - 40rem);
+
+    /* #endregion */
 }
 
 /* #region mobile */
@@ -129,7 +145,7 @@ section > * {
 section:nth-of-type(1) {
     transform: translateY(var(--droponelength));
     text-align: center;
-    animation: dropone var(--droponetime) ease-out var(--droponedelay);
+    animation: dropone var(--dropbasetime) ease-out var(--droponedelay);
     animation-fill-mode: forwards;
 }
 
@@ -382,20 +398,34 @@ footer {
 @media only screen and (min-width: 950px) {
 
     html {
-        --droponedelay: .125s;
-        --droponetime: 3.5s;
-        --droponelength: -8rem;
-        --droptwodelay: .5s;
-        --droptwolength: -2rem;
-        --droptwotime: 2s;
-        --dropthreelength: -2rem;
-        --dropthreedelay: 1.5s;
-        --dropthreetime: 1s;
-        --dropfourdelay: 2s;
-        --dropfourlength: 2rem;
-        --dropfourtime: 1s;
-        --dropfivedelay: 2.5s;
-        --dropfivetime: 1s;
+
+        /* #region LG SCREEN variables */
+
+            /* timing */
+                --dropbasedelay: 0s;
+                --dropbasetime: 3s;
+                
+                --droponedelay: 0s;
+
+                --droptwodelay: .5s;
+                --droptwotime: 3.5s;
+
+                --dropthreedelay: 1.5s;
+                --dropthreetime: 1.5s;
+
+                --dropfourdelay: 2s;
+                --dropfourtime: 1.25s;
+
+                --dropfivedelay: 2.5s;
+                --dropfivetime: 1s;
+
+            /* positioning */
+                --droponelength: -8rem;
+                --droptwolength: -5rem;
+                --dropthreelength: -2rem;
+                --dropfourlength: 2rem;
+
+        /* #endregion */
     }
 
     main {
