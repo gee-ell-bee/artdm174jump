@@ -192,6 +192,23 @@ section.labs {
         background-position: center;
         background-size: cover;
         background-repeat: no-repeat;
+        position: relative;
+        z-index: 2;
+    }
+
+    section.labs li[class] div,
+    section.projects li[class] div {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+    }
+
+    section.labs li:hover div,
+    section.projects li:hover div {
+        transition: opacity 1s ease-in-out;
     }
 
     section.labs li[class] a:hover {
@@ -217,23 +234,31 @@ section.labs {
     }
 
     section.labs li.three {
-        background-image: url(images/previews/preview-lab3.png);
+        background: content-box center/cover url(images/previews/preview-lab3.png);
     }
 
-    section.labs li.four {
-        background-image: url(images/previews/preview-lab4.png);
+    section.labs li.four div {
+        background: content-box no-repeat 30% 75%/500% url(images/previews/preview-lab4.png);
     }
 
-    section.labs li.five {
-        background-image: url(images/previews/preview-lab5.png);
+    section.labs li.four:hover div {
+        opacity: .8;
+    }
+
+    section.labs li.five div {
+        background: content-box no-repeat 20% 20%/500% url(images/previews/preview-lab5.png);
+    }
+
+    section.labs li.five:hover div {
+        opacity: .4;
     }
 
     section.labs li.six {
-        background-image: url(images/previews/preview-lab6.png);
+        background: content-box no-repeat center 30%/150% url(images/previews/preview-lab6.png);
     }
 
     section.labs li.seven {
-        background-image: url(images/previews/preview-lab7.png);
+        background: content-box no-repeat center/650% url(images/previews/preview-lab7.png);
     }
 
     section.labs li.eight {
@@ -269,8 +294,12 @@ section.projects {
         animation-fill-mode: forwards;
     }
 
-    section.projects li.two {
-        background-image: url(images/previews/preview-project2.png);
+    section.projects li.two div {
+        background: content-box no-repeat 0% 0%/300% url(images/previews/preview-project2.png);
+    }
+
+    section.projects li.two:hover div {
+        opacity: .5;
     }
 
     section.projects li.three {
