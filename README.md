@@ -1,2 +1,3 @@
 # ARTDM 174 Jump Page
-homepage for all ARTDM 174 assignments
+One-stop-shop for all of Grey's projects from ARTDM-174 Web Design with JavaScript
+[View Here](https://gee-ell-bee.github.io/artdm174jump)
