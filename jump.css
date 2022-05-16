@@ -302,8 +302,12 @@ section.projects {
         opacity: .5;
     }
 
-    section.projects li.three {
-        background-image: url(images/previews/preview-project3.png);
+    section.projects li.three div {
+        background: content-box no-repeat 70% 50%/400% url(images/previews/preview-project3.png);
+    }
+
+    section.projects li.three:hover div {
+        opacity: .5;
     }
 
 /* #endregion */
