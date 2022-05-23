@@ -262,7 +262,7 @@ section.labs {
     }
 
     section.labs li.eight {
-        background-image: url(images/previews/preview-lab8.png);
+        background: content-box no-repeat center 30%/150% url(images/previews/preview-lab8.png);
     }
 /* #endregion */
 
@@ -310,6 +310,13 @@ section.projects {
         opacity: .5;
     }
 
+    section.projects li.four div {
+        background: content-box no-repeat 70% 50%/400% url(images/previews/preview-project4.png);
+    }
+
+    section.projects li.four:hover div {
+        opacity: .5;
+    }
 /* #endregion */
 
 ol {
